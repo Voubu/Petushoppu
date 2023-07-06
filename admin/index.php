@@ -3,6 +3,8 @@
 
 <head>
     <?php include "link.php"; ?>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -33,19 +35,64 @@
                     </div>
 
                     <!-- Content Row -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pemasukan dari Hasil Penjualan Jasa Dokter</h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="serviceRevenueChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Top Penjualan Barang</h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="topSellingGoodsChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pemasukan dari Hasil Penjualan Barang</h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="petshopGoodsChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Tren Total Pendapatan per Minggu</h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="revenueTrendChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /.container-fluid -->
 
                 </div>
-                <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <?php include "footer.php"; ?>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <?php include "footer.php"; ?>
-            <!-- End of Footer -->
+            <!-- End of Content Wrapper -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Page Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -56,6 +103,13 @@
     </a>
 
     <?php include "plugin.php"; ?>
+
+    <!-- Kode JS untuk Visualisasi Data di Dashboard -->
+     
+    <script src="../js/visualisasiData.js"></script>
+
+
 </body>
 
 </html>
+
