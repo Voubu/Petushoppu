@@ -1,0 +1,92 @@
+
+
+.wrapper{
+    display: inline-flex;
+    background: transparent;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 12px;
+    padding: 20px 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 2%;
+}
+.wrapper .option{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+.wrapper .optionly{
+    background: #fff;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+
+input[type="radio"]{
+    display: none;
+}
+#option-1:checked:checked ~ .option-1{
+    border-color: #8dbbff;
+    background: #77c477;
+}
+#option-2:checked:checked ~ .option-2{
+    border-color: #8dbbff;
+    background: #ec7979;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+    background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.wrapper .option span{
+    font-size: 20px;
+    color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+    color: #fff;
+}
+
+/* ======================= deletePage.php only ====================== */
+
+.option#option-1:hover{
+    background-color: #77c477;
+    color: #fff;
+}
+
+.option#option-2:hover{
+    background-color: #ec7979;
+    color: #fff;
+}
+
+.option#option-1:active{
+    background-color: #62a062;
+    color: #fff;
+}
+
+.option#option-2:active{
+    background-color: #c56767;
+    color: #fff;
+}
