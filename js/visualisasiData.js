@@ -81,7 +81,7 @@ async function updatePetshopGoodsChart() {
     var chart = new Chart(canvas, {
         type: 'line',
         data: {
-            labels: petshopGoodsSalesData.map(item => item.label),
+            labels: petshopGoodsSalesData.map((item, index) => `Minggu ${index + 1}`),
             datasets: [{
                 label: 'Pemasukan dari Barang (Rupiah)',
                 data: petshopGoodsSalesData.map(item => item.sales),
