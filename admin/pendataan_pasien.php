@@ -200,13 +200,15 @@ if (isset($_POST['hapus'])) {
                                                 <td class="align-middle"><?= htmlspecialchars($data['jenis']); ?></td>
                                                 <td class="align-middle"><?= htmlspecialchars($data['alamat']); ?></td>
                                                 <td class="align-middle">
-                                                    <?php 
-                                                        if ($data['status'] == 1){
-                                                            echo '<div class"hijau" style="background: #50c76b; color: white; margin: 0; padding: 0; border-radius: 12px; text-align: center; font-size: 1.6rem;"><p>Sudah</p></div>';
-                                                        } else{
-                                                            echo '<div class"merah" style="background: #e86473; color: white; margin: 0; padding: 0; text-align: center; border-radius: 12px; font-size: 1.6rem;"><p>Belum</p></div>';
-                                                        };
-                                                    ?>
+                                                    <?php if ($data['status'] == 1) : ?>
+                                                        <div class="hijau" style="background: #50c76b; color: white; margin: 0; padding: 0; border-radius: 12px; text-align: center; font-size: 1.2rem;">
+                                                            <p style="margin: 0; padding: 8px;">Sudah</p>
+                                                        </div>
+                                                    <?php else : ?>
+                                                        <div class="merah" style="background: #e86473; color: white; margin: 0; padding: 0; text-align: center; border-radius: 12px; font-size: 1.2rem;">
+                                                            <p style="margin: 0; padding: 8px;">Belum</p>
+                                                        </div>
+                                                    <?php endif; ?>
                                                 </td>
                                                 <td style="text-align: center;">
                                                     <a href="edit.php?id=<?php echo $data['idPasien'];?>" class="link-dark" onclick="toggle()" ><ion-icon name="create-outline" style="color: #3f63a7; font-size: 2em; z-index: 1;">"</ion-icon></a>

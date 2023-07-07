@@ -167,105 +167,99 @@ if (isset($_POST['hapus'])) {
                     </div>
                     <!-- Content Row -->
                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data Jadwal Praktik</h6>
-                        </div>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Data Jadwal Praktik</h6>
+                            </div>
 
-                        <div class="d-flex gap-3">
+                            <div class="card-body">
+                                <div class="d-flex overflow-auto">
+                                    <?php
+                                    // Mendapatkan data dokter dari database
+                                    $query = "SELECT id, nama, hari, waktu_mulai, waktu_selesai FROM dokter";
+                                    $result = mysqli_query($conn, $query);
 
-                            <?php
-                            // Mendapatkan data dokter dari database
-                            $query = "SELECT id, nama, hari, waktu_mulai, waktu_selesai FROM dokter";
-                            $result = mysqli_query($conn, $query);
+                                    // Daftar warna latar belakang card
+                                    $colors = array("#fa9191", "#97db97", "#8a8adb", "#eba9eb", "#deb878", "#91e3e3");
 
-                            // Daftar warna latar belakang card
-                            $colors = array("green", "purple", "orange", "lightblue", "black", "brown");
+                                    // Menghitung jumlah dokter
+                                    $numDoctors = mysqli_num_rows($result);
 
-                            // Menghitung jumlah dokter
-                            $numDoctors = mysqli_num_rows($result);
+                                    // Perulangan untuk menampilkan data dokter dalam card
+                                    $i = 0;
+                                    foreach ($result as $row) {
+                                        $id = $row['id'];
+                                        $nama = $row['nama'];
+                                        $hari = $row['hari'];
+                                        $waktu_mulai = $row['waktu_mulai'];
+                                        $waktu_selesai = $row['waktu_selesai'];
 
-                            // Perulangan untuk menampilkan data dokter dalam card
-                            $i = 0;
-                            foreach ($result as $row) {
-                                $id = $row['id'];
-                                $nama = $row['nama'];
-                                $hari = $row['hari'];
-                                $waktu_mulai = $row['waktu_mulai'];
-                                $waktu_selesai = $row['waktu_selesai'];
-
-                                // Mengambil warna latar belakang card berdasarkan indeks perulangan
-                                $colorIndex = $i % count($colors);
-                                $background = $colors[$colorIndex];
-                            ?>
-
-                                <div class="card" style="background-color: <?= $background; ?>;">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?= $hari; ?></h5>
-                                        <h6 class="card-subtitle mb-2"><?= $nama; ?></h6>
-                                        <p class="card-text"><?= $waktu_mulai; ?> - <?= $waktu_selesai; ?></p>
-                                        <button class="btn btn-primary" data-toggle="modal" data-target="#editModal<?= $id; ?>">Edit</button>
-                                    </div>
-                                </div>
-
-                                <div class="modal fade" id="editModal<?= $id; ?>" tabindex="-1" role="dialog" aria-labelledby="editModalLabel<?= $id; ?>" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="editModalLabel<?= $id; ?>">Edit Dokter</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form method="POST" action="">
-                                                    <input type="hidden" name="id" value="<?= $id; ?>">
-                                                    <div class="form-group">
-                                                        <label for="nama<?= $id; ?>">Nama:</label>
-                                                        <input type="text" class="form-control" id="nama<?= $id; ?>" name="nama" value="<?= $nama; ?>" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="hari<?= $id; ?>">Hari:</label>
-                                                        <input type="text" class="form-control" id="hari<?= $id; ?>" name="hari" value="<?= $hari; ?>" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="waktu_mulai<?= $id; ?>">Waktu Mulai:</label>
-                                                        <input type="time" class="form-control" id="waktu_mulai<?= $id; ?>" name="waktu_mulai" value="<?= $waktu_mulai; ?>" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="waktu_selesai<?= $id; ?>">Waktu Selesai:</label>
-                                                        <input type="time" class="form-control" id="waktu_selesai<?= $id; ?>" name="waktu_selesai" value="<?= $waktu_selesai; ?>" required>
-                                                    </div>
-                                                    <button type="submit" name="edit" class="btn btn-primary">Simpan</button>
-                                                </form>
+                                        // Mengambil warna latar belakang card berdasarkan indeks perulangan
+                                        $colorIndex = $i % count($colors);
+                                        $background = $colors[$colorIndex];
+                                    ?>
+                                        <div class="card m-2" style="width: 220px; background-color: <?= $background; ?>;">
+                                            <div class="card-body text-center">
+                                                <h6 class="card-title"><?= $hari; ?></h6>
+                                                <h6 class="card-subtitle mb-2"><?= $nama; ?></h6>
+                                                <p class="card-text"><?= $waktu_mulai; ?> - <?= $waktu_selesai; ?></p>
+                                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editModal<?= $id; ?>">Edit</button>
                                             </div>
                                         </div>
-                                    </div>
+
+                                        <!-- Edit Modal -->
+                                        <div class="modal fade" id="editModal<?= $id; ?>" tabindex="-1" role="dialog" aria-labelledby="editModalLabel<?= $id; ?>" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="editModalLabel<?= $id; ?>">Edit Dokter</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form method="POST" action="">
+                                                            <input type="hidden" name="id" value="<?= $id; ?>">
+                                                            <div class="form-group">
+                                                                <label for="nama<?= $id; ?>">Nama:</label>
+                                                                <input type="text" class="form-control" id="nama<?= $id; ?>" name="nama" value="<?= $nama; ?>" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="hari<?= $id; ?>">Hari:</label>
+                                                                <input type="text" class="form-control" id="hari<?= $id; ?>" name="hari" value="<?= $hari; ?>" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="waktu_mulai<?= $id; ?>">Waktu Mulai:</label>
+                                                                <input type="time" class="form-control" id="waktu_mulai<?= $id; ?>" name="waktu_mulai" value="<?= $waktu_mulai; ?>" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="waktu_selesai<?= $id; ?>">Waktu Selesai:</label>
+                                                                <input type="time" class="form-control" id="waktu_selesai<?= $id; ?>" name="waktu_selesai" value="<?= $waktu_selesai; ?>" required>
+                                                            </div>
+                                                            <button type="submit" name="edit" class="btn btn-primary">Simpan</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                        $i++;
+                                    }
+
+                                    // Jika tidak ada data dokter
+                                    if ($numDoctors === 0) {
+                                    ?>
+                                        <div class="card m-2" style="width: 220px;">
+                                            <div class="card-body">
+                                                <p class="card-text">Tidak ada data dokter.</p>
+                                            </div>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
-
-                            <?php
-                                $i++;
-                            }
-
-                            // Jika tidak ada data dokter
-                            if ($numDoctors === 0) {
-                            ?>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <p class="card-text">Tidak ada data dokter.</p>
-                                    </div>
-                                </div>
-                            <?php
-                            }
-                            ?>
-
-
+                            </div>
                         </div>
-
-
-
-
-                    </div>
 
 
                 </div>
