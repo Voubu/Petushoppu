@@ -1,2 +1,2 @@
 # Website-Gadungan
-Website gadungan buatan anak kuliahan untuk tugas bullshit
+Website indah cocok untuk dinikmati bersama :)
