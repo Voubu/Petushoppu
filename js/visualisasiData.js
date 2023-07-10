@@ -1,5 +1,4 @@
 
-// fetch the service revenue data from the server
 function fetchServiceRevenueData() {
     return fetch('fetch_service_revenue.php')
         .then(response => response.json())
@@ -7,14 +6,11 @@ function fetchServiceRevenueData() {
         .catch(error => console.error('Error:', error));
 }
 
-// update the service revenue chart with the fetched data
 async function updateServiceRevenueChart() {
     var serviceRevenueData = await fetchServiceRevenueData();
 
-    // Get canvas element
     var canvas = document.getElementById('serviceRevenueChart');
 
-    // Create chart
     var chart = new Chart(canvas, {
         type: 'line',
         data: {
@@ -62,7 +58,6 @@ async function updateServiceRevenueChart() {
     });
 }
 
-// fetch the petshop goods sales data from the server
 function fetchPetshopGoodsSalesData() {
     return fetch('fetch_data.php')
         .then(response => response.json())
@@ -70,14 +65,11 @@ function fetchPetshopGoodsSalesData() {
         .catch(error => console.error('Error:', error));
 }
 
-// update the petshop goods sales chart with the fetched data
 async function updatePetshopGoodsChart() {
     var petshopGoodsSalesData = await fetchPetshopGoodsSalesData();
 
-    // Get canvas element
     var canvas = document.getElementById('petshopGoodsChart');
 
-    // Create chart
     var chart = new Chart(canvas, {
         type: 'line',
         data: {
@@ -125,7 +117,6 @@ async function updatePetshopGoodsChart() {
     });
 }
 
-// fetch the top selling petshop goods data from the server
 function fetchTopSellingGoodsData() {
     return fetch('fetch_top_selling_goods.php')
         .then(response => response.json())
@@ -133,14 +124,11 @@ function fetchTopSellingGoodsData() {
         .catch(error => console.error('Error:', error));
 }
 
-// update the top selling petshop goods chart with the fetched data
 async function updateTopSellingGoodsChart() {
     var topSellingGoodsData = await fetchTopSellingGoodsData();
 
-    // Get canvas element
     var canvas = document.getElementById('topSellingGoodsChart');
 
-    // Create chart
     var chart = new Chart(canvas, {
         type: 'pie',
         data: {
@@ -149,18 +137,18 @@ async function updateTopSellingGoodsChart() {
                 label: 'Top Selling Petshop Goods',
                 data: topSellingGoodsData.map(item => item.quantity),
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)', 
-                    'rgba(54, 162, 235, 0.2)', 
-                    'rgba(255, 205, 86, 0.2)', 
-                    'rgba(75, 192, 192, 0.2)', 
-                    'rgba(153, 102, 255, 0.2)' 
+                    '#F3F393', 
+                    '#93CEF3', 
+                    '#f39398', 
+                    '#93F395', 
+                    '#f3c593' 
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 205, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)'
+                    '#000000',
+                    '#000000',
+                    '#000000',
+                    '#000000',
+                    '#000000'
                 ],
                 borderWidth: 1
             }]
@@ -186,7 +174,6 @@ async function updateTopSellingGoodsChart() {
     });
 }
 
-// fetch the revenue trend data from the server
 function fetchRevenueTrendData() {
 return fetch('fetch_revenue_trend.php')
     .then(response => response.json())
@@ -194,51 +181,55 @@ return fetch('fetch_revenue_trend.php')
     .catch(error => console.error('Error:', error));
 }
 
-// update the revenue trend chart with the fetched data
 async function updateRevenueTrendChart() {
 var revenueTrendData = await fetchRevenueTrendData();
 
-// Get canvas element
 var canvas = document.getElementById('revenueTrendChart');
 
-// Create chart
 var chart = new Chart(canvas, {
     type: 'bar',
     data: {
-    labels: revenueTrendData.map((item, index) => `Minggu ${index + 1}`),
-    datasets: [{
-        label: 'Total Pendapatan (Rupiah)',
-        data: revenueTrendData.map(item => item.weekly_revenue),
-        backgroundColor: 'rgba(75, 192, 192, 0.2)', 
-        borderColor: 'rgba(75, 192, 192, 1)', 
-        borderWidth: 2
-    }]
+        labels: revenueTrendData.map((item, index) => `Minggu ${index + 1}`),
+        datasets: [{
+            label: 'Total Pendapatan (Rupiah)',
+            data: revenueTrendData.map(item => item.weekly_revenue),
+            backgroundColor: '#4bc0c0', // Solid color for the bars
+            borderColor: '#535353',
+            borderWidth: 2
+        }]
     },
     options: {
-    scales: {
-        y: {
-        beginAtZero: true,
-        ticks: {
-            callback: function(value, index, values) {
-            
-            return 'Rp ' + value.toLocaleString();
+        scales: {
+            x: {
+                grid: {
+                    display: false // Remove x-axis grid lines
+                }
+            },
+            y: {
+                grid: {
+                    display: false // Remove y-axis grid lines
+                },
+                beginAtZero: true,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return 'Rp ' + value.toLocaleString();
+                    }
+                }
+            }
+        },
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return 'Rp ' + context.parsed.y.toLocaleString();
+                    }
+                }
             }
         }
-        }
-    },
-    plugins: {
-        tooltip: {
-        callbacks: {
-            label: function(context) {
-            
-            return 'Rp ' + context.parsed.y.toLocaleString();
-            }
-        }
-        }
-    }
     }
 });
 }
+
 // Call the functions to update charts
 updateServiceRevenueChart();
 updatePetshopGoodsChart();

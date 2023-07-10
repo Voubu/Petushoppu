@@ -39,7 +39,7 @@
                         <div class="col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Pemasukan dari Hasil Penjualan Jasa Dokter</h6>
+                                    <h6 class="m-0 font-weight-bold" style="color:#f88f8f;">Pemasukan dari Hasil Penjualan Jasa Dokter</h6>
                                 </div>
                                 <div class="card-body">
                                     <canvas id="serviceRevenueChart"></canvas>
@@ -49,7 +49,7 @@
                         <div class="col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Top Penjualan Barang</h6>
+                                    <h6 class="m-0 font-weight-bold" style="color:#f88f8f;">Top Penjualan Barang</h6>
                                 </div>
                                 <div class="card-body">
                                     <canvas id="topSellingGoodsChart"></canvas>
@@ -59,7 +59,7 @@
                         <div class="col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Pemasukan dari Hasil Penjualan Barang</h6>
+                                    <h6 class="m-0 font-weight-bold" style="color:#f88f8f;">Pemasukan dari Hasil Penjualan Barang</h6>
                                 </div>
                                 <div class="card-body">
                                     <canvas id="petshopGoodsChart"></canvas>
@@ -69,7 +69,7 @@
                         <div class="col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Tren Total Pendapatan per Minggu</h6>
+                                    <h6 class="m-0 font-weight-bold" style="color:#f88f8f;">Tren Total Pendapatan per Minggu</h6>
                                 </div>
                                 <div class="card-body">
                                     <canvas id="revenueTrendChart"></canvas>
@@ -77,7 +77,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <!-- /.container-fluid -->
 
@@ -107,7 +106,6 @@
     <!-- Kode JS untuk Visualisasi Data di Dashboard -->
      
     <script src="../js/visualisasiData.js"></script>
-
 
 </body>
 

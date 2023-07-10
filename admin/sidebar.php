@@ -58,25 +58,25 @@
             </a>
             <ul class="collapse submenu" style="list-style-type: none;">
                 <li>
-                    <a class="nav-link" href="pembukuan.php">
+                    <a class="nav-link exclude-link" href="pembukuan.php">
                         <i class="fas fa-calendar-day"></i>
                         <span>Harian</span>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="mingguan.php">
+                    <a class="nav-link exclude-link" href="mingguan.php">
                         <i class="fas fa-calendar-week"></i>
                         <span>Mingguan</span>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="Bulanan.php">
+                    <a class="nav-link exclude-link" href="Bulanan.php">
                         <i class="fas fa-calendar-alt"></i>
                         <span>Bulanan</span>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="tahunan.php">
+                    <a class="nav-link exclude-link" href="tahunan.php">
                         <i class="fas fa-calendar-check"></i>
                         <span>Tahunan</span>
                     </a>
@@ -89,12 +89,19 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle" style="margin-left: 34%; margin-right: 34%;"></button>
+            <button class="rounded-circle border-0 sidebar-toggler" id="sidebarToggle"></button>
         </div>
     </div>
 </ul>
 
 <script type="text/javascript">
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+    if(link.href === window.location.href){
+        link.setAttribute('aria-current', 'page')
+    }
+    })
+    
     document.addEventListener("DOMContentLoaded", function(){
         document.getElementById('sidebarToggle').addEventListener('click', function() {
             document.querySelector('.sidebar-brand').classList.toggle('collapsed');

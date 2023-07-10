@@ -128,7 +128,7 @@ if (isset($_POST['hapus'])) {
                 <div class="container-fluid">
                     <div class="">
                         <p>
-                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: white; background-color: black;">
                                 <i class="fas fa-plus-square"></i> Tambah Data Pasien
                             </a>
                         </p>
@@ -170,7 +170,7 @@ if (isset($_POST['hapus'])) {
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data Pasien</h6>
+                            <h6 class="m-0 font-weight-bold" style="color:#f88f8f;">Data Pasien</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
