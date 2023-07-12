@@ -6,8 +6,8 @@ Website indah cocok untuk dinikmati bersama :)
 ## Table of Contents
 
 
-- [Latar Belakang](#Aplikasi Apa Ini?)
-- [Latar Belakang](#Latar Belakang Pembuatan)
+- [Introduction](#Aplikasi-Apa-Ini?)
+- [Background](#Latar-Belakang-Pembuatan)
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Installation](#installation)
