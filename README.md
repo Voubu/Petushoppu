@@ -5,7 +5,9 @@ Website indah cocok untuk dinikmati bersama :)
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+
+- [Latar Belakang](#Aplikasi Apa Ini?)
+- [Latar Belakang](#Latar Belakang Pembuatan)
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Installation](#installation)
@@ -14,8 +16,12 @@ Website indah cocok untuk dinikmati bersama :)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
-Provide a brief overview of the website and its purpose. Include any relevant background information or context.
+## Aplikasi Apa Ini?
+Aplikasi PetShop adalah aplikasi yang dikembangkan untuk memudahkan manajemen dan karyawan PetShop agar pengelolaan bisnisnya semakin mudah, efektif, dan efisien.
+
+## Latar Belakang Pembuatan
+1. Manajemen kesulitan melakukan pemantauan pemasukan keuangan dan stok barang/obat sehingga rentan untuk dimanipulasi oleh karyawan, serta monitoring jadwal praktik dokter
+2. Beban kerja karyawan tinggi akibat banyaknya laporan keuangan dan pendataan pasien yang harus disusun, serta sulitnya mengontrol arus keluar dan masuknya barang/obat
 
 ## Getting Started
 Explain how users can get started with the website. This may include prerequisites, system requirements, or any other necessary setup steps.
