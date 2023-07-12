@@ -8,6 +8,7 @@ Website indah cocok untuk dinikmati bersama :)
 
 - [Introduction](#Aplikasi-Apa-Ini?)
 - [Background](#Latar-Belakang-Pembuatan)
+- [Goals](#Apa-yang-Ingin-Kami-Capai)
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Installation](#installation)
@@ -22,6 +23,10 @@ Aplikasi PetShop adalah aplikasi yang dikembangkan untuk memudahkan manajemen da
 ## Latar Belakang Pembuatan
 1. Manajemen kesulitan melakukan pemantauan pemasukan keuangan dan stok barang/obat sehingga rentan untuk dimanipulasi oleh karyawan, serta monitoring jadwal praktik dokter
 2. Beban kerja karyawan tinggi akibat banyaknya laporan keuangan dan pendataan pasien yang harus disusun, serta sulitnya mengontrol arus keluar dan masuknya barang/obat
+
+## Apa yang Ingin Kami Capai?
+1. Efisiensi dalam melakukan Pembukuan atas pemasukan keuangan, Monitoring stok barang dan obat, Pendataan pasien serta Manajemen Jadwal Praktik.
+2. Kemudahan bagi manajemen dalam melakukan pemantauan atas Pembukuan, Stok Barang/Obat dan Jadwal Dokter. Sehingga dapat meminimalkan kemungkinan manipulasi oleh karyawan
 
 ## Getting Started
 Explain how users can get started with the website. This may include prerequisites, system requirements, or any other necessary setup steps.
