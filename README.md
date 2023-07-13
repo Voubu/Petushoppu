@@ -45,7 +45,7 @@ Aplikasi PetShop adalah aplikasi yang dikembangkan untuk memudahkan manajemen da
 ## Getting Started
 Pastikan terdapat XAMPP di PC.
 
-## <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cubes-solid-red.svg" width="30" height="30"> Features
+## [<img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cubes-solid-red.svg" alt="Cubes Icon" width="30" height="30">](#features) Features
 
 ### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Monitoring Pembukuan
 Di fitur ini, admin dapat melihat berbagai macam visualisasi data yang diambil langsung dari catatan pembukuan petshop seperti pie chart untuk mengetahui jenis barang yang paling laris terjual, line chart untuk mengetahui pemasukan dari hasil penjualan barang ataupun jasa, dan bar chart untuk mengetahui pendapatan petshop perminggu.
