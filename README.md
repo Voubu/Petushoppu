@@ -48,24 +48,24 @@ Aplikasi PetShop adalah aplikasi yang dikembangkan untuk memudahkan manajemen da
 ## Getting Started
 Pastikan terdapat XAMPP di PC.
 
-## Features
+## <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cubes-solid-red.svg" width="40" height="40"> Features
 
-### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="20" height="20">   Monitoring Pembukuan
+### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Monitoring Pembukuan
 Di fitur ini, admin dapat melihat berbagai macam visualisasi data yang diambil langsung dari catatan pembukuan petshop seperti pie chart untuk mengetahui jenis barang yang paling laris terjual, line chart untuk mengetahui pemasukan dari hasil penjualan barang ataupun jasa, dan bar chart untuk mengetahui pendapatan petshop perminggu.
 
-### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="20" height="20">   Pendataan Gudang Makanan Petshop
+### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Pendataan Gudang Makanan Petshop
 Di fitur ini, admin dapat mencatat dan memonitor makanan yang ada di petshop.
 
-### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="20" height="20">   Pendataan Gudang Obat Petshop
+### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Pendataan Gudang Obat Petshop
 Di fitur ini, admin dapat mencatat dan memonitor obat yang ada di petshop.
 
-### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="20" height="20">   Jadwal Praktik
+### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Jadwal Praktik
 Di fitur ini, admin dapat mengatur dan mengecek siapa saja dokter hewan yang akan melakukan praktik di setiap harinya.
 
-### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="20" height="20">   Pendataan Pasien Hewan
+### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Pendataan Pasien Hewan
 Di fitur ini, admin dapat mendata dan mengecek pasien yang akan diperiksa atau sudah diperiksa.
 
-#### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="20" height="20">   Pembukuan
+#### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Pembukuan
 Di fitur ini, admin dapat mencatat pendapatan petshop perharinya yang nantinya akan divisualisasikan di halaman dashboard.
 
 ## Installation
