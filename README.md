@@ -8,18 +8,12 @@
 
 ## Table of Contents
 
-
 - [Introduction](#aplikasi-apa-ini)
 - [Background](#latar-belakang-pembuatan)
 - [Solutions](#bagaimana-solusi-kami)
 - [Goals](#apa-yang-ingin-kami-capai)
 - [Getting Started](#getting-started)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/pc-blue.svg" width="30" height="30">  Aplikasi Apa Ini?
 
@@ -45,7 +39,7 @@ Aplikasi PetShop adalah aplikasi yang dikembangkan untuk memudahkan manajemen da
 ## Getting Started
 Pastikan terdapat XAMPP di PC.
 
-## [<img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cubes-solid-red.svg" alt="Cubes Icon" width="30" height="30">](#features) Features
+## [<img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cubes-solid-red.svg" alt="Cubes Icon" width="30" height="30"> Features](#features) Features
 
 ### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Monitoring Pembukuan
 Di fitur ini, admin dapat melihat berbagai macam visualisasi data yang diambil langsung dari catatan pembukuan petshop seperti pie chart untuk mengetahui jenis barang yang paling laris terjual, line chart untuk mengetahui pemasukan dari hasil penjualan barang ataupun jasa, dan bar chart untuk mengetahui pendapatan petshop perminggu.
@@ -65,21 +59,7 @@ Di fitur ini, admin dapat mendata dan mengecek pasien yang akan diperiksa atau s
 #### <img src="https://raw.githubusercontent.com/Voubu/Petushoppu/master/cube-yellow.svg" width="15" height="15">   Pembukuan
 Di fitur ini, admin dapat mencatat pendapatan petshop perharinya yang nantinya akan divisualisasikan di halaman dashboard.
 
-## Installation
-If there are any installation steps required to set up the website, outline them here. Include any dependencies or additional tools needed.
-
-## Usage
-Explain how to use the website and its various functionalities. Provide examples or code snippets if necessary.
-
-## Troubleshooting
-Address common issues or errors that users may encounter and provide solutions or workarounds. Include a FAQ section if applicable.
-
-## Contributing
-If you allow contributions to your website, explain how users can contribute and provide guidelines for submitting changes or enhancements.
-
-## License
-Specify the license under which the website is released. Include any relevant copyright or attribution information.
-
+## Note
 p.s untuk login
     [username: admin]
     [password: admin123]
